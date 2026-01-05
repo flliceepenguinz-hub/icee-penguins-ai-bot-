@@ -1,0 +1,219 @@
+:root {
+  --bg: #0b1220;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel2: rgba(255, 255, 255, 0.085);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.70);
+  --ok: #32d583;
+  --warn: #fdb022;
+  --high: #f97066;
+  --danger: #f04438;
+  --border: rgba(255, 255, 255, 0.10);
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+.appShell {
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% 0%, rgba(70, 170, 255, 0.20), transparent 55%),
+    radial-gradient(900px 700px at 80% 20%, rgba(50, 213, 131, 0.10), transparent 60%),
+    var(--bg);
+  padding: 22px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.brand {
+  display: grid;
+  gap: 2px;
+}
+
+.brandTitle {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.brandSub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.control {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+}
+
+.control label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.control select, .control button {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  padding: 8px 10px;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  padding: 14px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.panelTitle {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.panelMeta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metricCard {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel2);
+  padding: 12px;
+}
+
+.metricTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.metricName {
+  font-weight: 800;
+}
+
+.pill {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.pill.green { background: rgba(50, 213, 131, 0.15); color: #bfffe2; }
+.pill.yellow { background: rgba(253, 176, 34, 0.14); color: #ffe7b1; }
+.pill.red { background: rgba(240, 68, 56, 0.15); color: #ffd0cd; }
+
+.metricValue {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.metricRange {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.listItem {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 10px 10px;
+}
+
+.listItemTitle {
+  font-weight: 800;
+}
+
+.listItemSub {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.chartWrap {
+  height: 260px;
+}
+
+.tiny {
+  font-size: 12px;
+  color: var(--muted);
+}
+

@@ -1,0 +1,42 @@
+.riskGauge {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.riskGaugeTrack {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.10);
+  stroke-width: 12;
+}
+
+.riskGaugeValue {
+  fill: none;
+  stroke-width: 12;
+  transform: rotate(-90deg);
+  transform-origin: 70px 70px;
+  stroke-linecap: round;
+}
+
+.riskGaugeText {
+  display: grid;
+  gap: 2px;
+}
+
+.riskGaugeScore {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.riskGaugeLabel {
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.riskGaugeHint {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
